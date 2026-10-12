@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Draining Dunes.sln"
+    "dotnet.defaultSolution": "Draining-Dunes-kopie.sln"
 }
