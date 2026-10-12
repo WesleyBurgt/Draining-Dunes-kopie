@@ -119,8 +119,7 @@ public class CarControl : MonoBehaviour
         float forwardSpeed = Vector3.Dot(transform.forward, rigidBody.linearVelocity);
         float speedFactor = Mathf.InverseLerp(0, maxSpeed, Mathf.Abs(forwardSpeed));
 
-        float motorTorqueWithDamage = motorTorque * (100 - damagePercentage) / 100;
-        float currentMotorTorque = Mathf.Lerp(motorTorqueWithDamage, 0, speedFactor);
+        float currentMotorTorque = Mathf.Lerp(motorTorque, 0, speedFactor);
         float currentSteerRange = Mathf.Lerp(steeringRange, steeringRangeAtMaxSpeed, speedFactor);
 
         bool canAccelerate = Fuel > 0 && damagePercentage < 100;
